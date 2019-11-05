@@ -4,6 +4,17 @@ from math import *
 import math
 import sys
 
+def usage():
+    print("USAGE")
+    print("    ./101pong x0 y0 z0 x1 y1 z1 n\n")
+    print("DESCRIPTION")
+    print("    x0  ball abscissa at time t - 1")
+    print("    y0  ball abscissa at time t - 1")
+    print("    z0  ball abscissa at time t - 1")
+    print("    x1  ball abscissa at time t")
+    print("    y1  ball abscissa at time t")
+    print("    z1  ball abscissa at time t")
+    print("    n   time shift (greater than or equal to zero, integer)")
 
 def calc(x0, y0, z0, x1, y1, z1):
     x = x1 - x0
@@ -22,14 +33,16 @@ def calc(x0, y0, z0, x1, y1, z1):
         print(f"The incidence angle is:\n{angle} degrees")
 
 if __name__ == "__main__":
-    x0 = float(sys.argv[1])
-    y0 = float(sys.argv[2])
-    z0 = float(sys.argv[3])
-    x1 = float(sys.argv[4])
-    y1 = float(sys.argv[5])
-    z1 = float(sys.argv[6])
-    n = int(sys.argv[7])
-    if n < 0:
-        exit(84)
-    else:
+    if len(sys.argv) == 2 and sys.argv[1][0] == '-' and sys.argv[1][1] == 'h':
+        usage()
+    try:
+        x0 = float(sys.argv[1])
+        y0 = float(sys.argv[2])
+        z0 = float(sys.argv[3])
+        x1 = float(sys.argv[4])
+        y1 = float(sys.argv[5])
+        z1 = float(sys.argv[6])
+        n = int(sys.argv[7])
         calc(x0, y0, z0, x1, y1, z1)
+    except:
+        exit (84)
