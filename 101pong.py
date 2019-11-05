@@ -30,6 +30,6 @@ if __name__ == "__main__":
     z1 = float(sys.argv[6])
     n = int(sys.argv[7])
     if n < 0:
-        print("error value n")
+        exit(84)
     else:
         calc(x0, y0, z0, x1, y1, z1)
