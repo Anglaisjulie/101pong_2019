@@ -15,6 +15,7 @@ def usage():
     print("    y1  ball abscissa at time t")
     print("    z1  ball abscissa at time t")
     print("    n   time shift (greater than or equal to zero, integer)")
+    exit (0)
 
 def calc(x0, y0, z0, x1, y1, z1):
     x = x1 - x0
