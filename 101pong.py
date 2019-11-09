@@ -36,6 +36,8 @@ def calc(x0, y0, z0, x1, y1, z1):
 if __name__ == "__main__":
     if len(sys.argv) == 2 and sys.argv[1][0] == '-' and sys.argv[1][1] == 'h':
         usage()
+    if len(sys.argv) != 8:
+        exit (84)
     try:
         x0 = float(sys.argv[1])
         y0 = float(sys.argv[2])
