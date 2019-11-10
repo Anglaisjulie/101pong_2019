@@ -46,6 +46,6 @@ if __name__ == "__main__":
         y1 = float(sys.argv[5])
         z1 = float(sys.argv[6])
         n = int(sys.argv[7])
-        calc(x0, y0, z0, x1, y1, z1)
     except:
         exit (84)
+    calc(x0, y0, z0, x1, y1, z1)
