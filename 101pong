@@ -29,7 +29,7 @@ def calc(x0, y0, z0, x1, y1, z1):
     alpha = z / sqrt((x*x) + (y*y) + (z*z))
     angle = round(acos(alpha) / math.pi *180 - 90, 2)
     if z == 0 or xt == 0 or (z1 / z) > 0:
-        print("The ball won’t reach the paddle.")
+        print("The ball won't reach the paddle.")
     else:
         print(f"The incidence angle is:\n{angle} degrees")
 
@@ -47,5 +47,7 @@ if __name__ == "__main__":
         z1 = float(sys.argv[6])
         n = int(sys.argv[7])
     except:
+        exit (84)
+    if float(n) != int(n) or int(n) < 0:
         exit (84)
     calc(x0, y0, z0, x1, y1, z1)
